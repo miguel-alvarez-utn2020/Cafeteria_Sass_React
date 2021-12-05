@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.card{
+    border-radius: 1rem;
+    background-color: v.$cafeClaro;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    .card-texto{
+        line-height: 2;
+    }
+    .card-nombre{
+        color: v.$primario;
+        font-family: v.$fuenteCursiva;
+        font-size: 2.4rem;
+        text-align: right;
+        line-height: 2;
+        margin: 2.4rem 0;
+    }
+}

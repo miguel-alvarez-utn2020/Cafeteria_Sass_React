@@ -1,0 +1,59 @@
+
+@use'variables' as v;
+/**
+@mixin color {
+    color: blue;
+}
+//usar con include mixins.color;
+//o usar con nombre alias -> include m.color;
+
+//mixins funcion
+/*
+    mixins bgColor($color){
+        background-color:$color;
+    }
+*/
+@mixin boxShadow ($pixels,$color, $alpha){
+    box-shadow: 0 0 $pixels rgba($color,$color,$color,$alpha);
+}
+@mixin bgColor($color) {
+    background-color: $color;
+}
+///////////////////////////////////
+@mixin telefono {
+    @media (min-width:v.$telefono){
+        @content;
+    }
+}
+@mixin telefonoDos {
+    @media (min-width:v.$telefonoDos){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width:v.$tablet) {
+        @content;
+    }
+}
+@mixin tabletDos {
+    @media (min-width:v.$tabletDos) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width:v.$desktop) {
+        @content;
+    }
+}
+@mixin desktopDos {
+    @media (min-width:v.$desktopDos) {
+        @content;
+    }
+}
+@mixin grid ($columnas, $gap){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+//shorthands
+
